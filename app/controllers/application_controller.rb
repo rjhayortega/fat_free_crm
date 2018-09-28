@@ -26,6 +26,7 @@ class ApplicationController < ActionController::Base
   respond_to :json, :xml, except: :edit
   respond_to :atom, :csv, :rss, :xls, only: :index
 
+  #Start of the code
   rescue_from ActiveRecord::RecordNotFound, with: :respond_to_not_found
   rescue_from CanCan::AccessDenied,         with: :respond_to_access_denied
 
