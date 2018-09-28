@@ -11,7 +11,7 @@ class EntitiesController < ApplicationController
 
   before_action :set_options, only: :index
   before_action :load_ransack_search, only: :index
-
+  #start
   load_and_authorize_resource
 
   after_action :update_recently_viewed, only: :show
